@@ -1,7 +1,14 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeBlinkyDancer = function(top, left, timeBetweenSteps, direction) {
 
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  this.oldStep = makeDancer.prototype.step;
+  makeDancer.call(this, top, left, timeBetweenSteps, direction);
+  // this.oldStep = makeDancer.prototype.step;
+  // this.$node.addClass('standingLeft');
+  if (this.facing === 'left') {
+    this.$node.addClass('standingLeft');
+  } else {
+    this.$node.addClass('standingRight');
+
+  }
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
