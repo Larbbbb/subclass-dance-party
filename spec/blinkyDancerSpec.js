@@ -18,6 +18,14 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
+  it('blinkyDancer.facing should be the same direction as class', function() {
+    if (blinkyDancer.facing === 'left') {
+      expect(blinkyDancer.$node.hasClass('standingLeft')).to.be.true;
+    } else {
+      expect(blinkyDancer.$node.hasClass('standingRight')).to.be.true;
+    }
+  });
+
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(blinkyDancer, 'step');

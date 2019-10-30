@@ -13,7 +13,7 @@ makeDigDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   if (this.stepCount > 0) {
     let target = {
-      top: $('body').height() * Math.random(),
+      top: $('body').height() * (Math.random() * (.6) + 0.4),
       left: $('body').width() * Math.random()
     };
 

@@ -24,11 +24,13 @@ body, a:link, a:visited, a:active{
 }
 
 .topbar{
-  height:32px;
+  height:56px;
   background-color: #555;
+  padding: 4px;
 }
 .title{
   background-color: #777;
+  height: 80%;
 }
 .dancer{
   /* border:10px solid red; */
